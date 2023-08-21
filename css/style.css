@@ -1,0 +1,310 @@
+@import url('/css/reset.css');
+
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background: linear-gradient(#fff, #fff); */
+  /* transition: all 1s; */
+}
+#bgBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#bgBox .bgItem {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#bgBox .bgItem.active {
+  opacity: 1;
+}
+
+
+/* navAndFooter */
+.navAndFooter h2 {
+  position: fixed;
+  z-index: 10;
+  top: 2rem;
+  left: 3rem;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.navAndFooter .footer {
+  position: fixed;
+  z-index: 10;
+  bottom: 2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.navAndFooter .footer p {
+  margin-bottom: 0.4rem;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+.navAndFooter .footer span {
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
+/* prev and next btns */
+.prevAndNextBtns {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.prevAndNextBtns p {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.prevAndNextBtns .prevBtn {
+  position: absolute;
+  left: calc(50% - 400px);
+  transform: rotate(0deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.prevAndNextBtns .prevBtn p {
+  text-align: right;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.prevAndNextBtns .prevArrow {
+  position: relative;
+  width: 50px;
+}
+.prevAndNextBtns .prevArrow .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: right center;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(0deg);
+
+  transition: transform 0.3s;
+}
+.prevAndNextBtns .prevBtn:hover p {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.prevAndNextBtns .prevBtn:hover .line:first-child {
+  transform: rotate(135deg);
+}
+.prevAndNextBtns .prevBtn:hover .line:last-child {
+  transform: rotate(-135deg);
+}
+
+.prevAndNextBtns .nextBtn {
+  position: absolute;
+  right: calc(50% - 400px);
+  transform: rotate(0deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.prevAndNextBtns .nextBtn p {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.prevAndNextBtns .nextArrow {
+  position: relative;
+  width: 50px;
+}
+.prevAndNextBtns .nextArrow .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left center;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(0deg);
+
+  transition: transform 0.3s;
+}
+.prevAndNextBtns .nextBtn:hover p {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.prevAndNextBtns .nextBtn:hover .line:first-child {
+  transform: rotate(135deg);
+}
+.prevAndNextBtns .nextBtn:hover .line:last-child {
+  transform: rotate(-135deg);
+}
+
+/* playList */
+section {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  margin-left: -180px;
+  /* transform: translateX(-50%); */
+  width: 360px;
+  height: 660px;
+  /* width: 25vw;
+  min-width: 360px;
+  max-width: 400px;
+  min-height: 660px;
+  max-height: 700px; */
+
+  transition: transform 0.5s;
+}
+article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+article .inner {
+  padding: 6rem 4rem;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  opacity: 0.5;
+  transform: scale(0.8);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.5rem;
+  align-items: center;
+
+  transition: transform 0.3s;
+}
+article.active .inner {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 음악 정보 */
+article .musicInfo {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+article .musicInfo .albumImg {
+  position: relative;
+  margin-bottom: 5rem;
+  width: 100%;
+  aspect-ratio: auto 1/1;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+article .musicInfo .albumImg span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  transform: scale(1.05);
+  z-index: -1;
+  aspect-ratio: auto 1/1;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  filter: blur(10px) brightness(1.2);
+}
+article .musicInfo .albumDesc {
+  text-align: center;
+}
+article .musicInfo .albumDesc * {
+  margin-bottom: 0.5rem;
+}
+article .musicInfo .albumDesc h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+article .musicInfo .albumDesc h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #666;
+}
+article .musicInfo .albumDesc p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #999;
+}
+
+/* 재생 바 */
+article .playingBar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+}
+article .playingBar .fullLeng {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  border-radius: 50px;
+  overflow: hidden;
+}
+article .playingBar .nowLeng {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background-color: #333;
+  border-radius: 50px;
+}
+
+/* 동작 버튼 */
+article .musicPlayer {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+article .musicPlayer div i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s;
+}
+article .musicPlayer div:hover i {
+  color: #333;
+}
+.random article .musicPlayer .randomPlayBtn i {
+  color: #cf1508;
+}
+article .musicPlayer .playOrPauseBtn i {
+  font-size: 4.5rem;
+}
+article .musicPlayer .playOrPauseBtn div {
+  display: none;
+}
+article .musicPlayer .playOrPauseBtn div.on {
+  display: block;
+}
+article .musicPlayer .playOrPauseBtn div.on i {
+  color: #333;
+}
