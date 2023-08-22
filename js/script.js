@@ -37,7 +37,7 @@ musicList.forEach((item, idx) => {
             <i class="fa-solid fa-arrow-rotate-left"></i>
           </div>
         </div>
-        <audio id="music" src="/music/musicAudio(${idx + 1}).mp4"></audio>
+        <audio id="music" src="./music/musicAudio(${idx + 1}).mp4"></audio>
       </div>
     </article>
   `;
