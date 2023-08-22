@@ -1,4 +1,29 @@
-@import url('./css/reset.css');
+/* @import url('./css/reset.css'); */
+/* Reset CSS */
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  /* block text drag */
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+ol, ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 
 body, html {
   margin: 0;
