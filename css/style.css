@@ -1,5 +1,9 @@
-@import url('./css/reset.css');
+@import url('/css/reset.css');
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
 #wrap {
   position: relative;
   width: 100%;
@@ -29,9 +33,9 @@
 .navAndFooter h2 {
   position: fixed;
   z-index: 10;
-  top: 2rem;
-  left: 3rem;
-  font-size: 4rem;
+  top: 20px;
+  left: 30px;
+  font-size: 40px;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -46,12 +50,12 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 .navAndFooter .footer p {
-  margin-bottom: 0.4rem;
-  font-size: 2rem;
+  margin-bottom: 4px;
+  font-size: 20px;
   opacity: 0.8;
 }
 .navAndFooter .footer span {
-  font-size: 1.4rem;
+  font-size: 14px;
   opacity: 0.6;
 }
 
@@ -65,7 +69,7 @@
   cursor: pointer;
 }
 .prevAndNextBtns p {
-  font-size: 2rem;
+  font-size: 20px;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -77,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 20px;
 }
 .prevAndNextBtns .prevBtn p {
   text-align: right;
@@ -119,7 +123,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 20px;
 }
 .prevAndNextBtns .nextBtn p {
   opacity: 1;
@@ -175,7 +179,7 @@ article {
   height: 100%;
 }
 article .inner {
-  padding: 6rem 4rem;
+  padding: 60px 40px;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -187,7 +191,7 @@ article .inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3.5rem;
+  gap: 35px;
   align-items: center;
 
   transition: transform 0.3s;
@@ -209,7 +213,7 @@ article .musicInfo {
 }
 article .musicInfo .albumImg {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 50px;
   width: 100%;
   aspect-ratio: auto 1/1;
   border-radius: 50%;
@@ -232,21 +236,21 @@ article .musicInfo .albumDesc {
   text-align: center;
 }
 article .musicInfo .albumDesc * {
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 article .musicInfo .albumDesc h4 {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #333;
 }
 article .musicInfo .albumDesc h5 {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
   color: #666;
 }
 article .musicInfo .albumDesc p {
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: 400;
   color: #999;
 }
@@ -282,10 +286,10 @@ article .musicPlayer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 40px;
 }
 article .musicPlayer div i {
-  font-size: 2.5rem;
+  font-size: 25px;
   cursor: pointer;
   color: #999;
   transition: color 0.3s;
@@ -297,7 +301,7 @@ article .musicPlayer div:hover i {
   color: #cf1508;
 }
 article .musicPlayer .playOrPauseBtn i {
-  font-size: 4.5rem;
+  font-size: 45px;
 }
 article .musicPlayer .playOrPauseBtn div {
   display: none;
